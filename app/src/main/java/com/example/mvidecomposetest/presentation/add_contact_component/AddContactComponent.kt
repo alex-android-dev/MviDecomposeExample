@@ -1,6 +1,8 @@
 package com.example.mvidecomposetest.presentation.add_contact_component
 
+import android.annotation.SuppressLint
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.serialization.Serializable
 
 interface AddContactComponent {
 
@@ -23,6 +25,8 @@ interface AddContactComponent {
     /**
      * Класс, который содержит все поля, которые будут меняться на экране
      */
+    @SuppressLint("UnsafeOptInUsageError")
+    @Serializable
     data class Model(
         val userName: String,
         val phoneNumber: String,
